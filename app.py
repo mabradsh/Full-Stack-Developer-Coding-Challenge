@@ -196,9 +196,9 @@ def create():
         try:
             db.session.add(newUser)
             db.session.commit()
-            return jsonify(success=True)
+            return jsonify(result='Ok')
         except: 
-            return jsonify(success=False)
+            return jsonify(result='An error occurred when creating account')
 
 @app.route('/')
 def index():
